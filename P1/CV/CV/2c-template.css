@@ -13,11 +13,11 @@ min-height: 500px;
 }
 
 .izquierda {
-width: 50%;
+width: 25%;
 }
 
 .derecha {
-width: 50%;
+width: 75%;
 }
 
 /* Clear floats despues de las columnas para eliminar la superposición */
