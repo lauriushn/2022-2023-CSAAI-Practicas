@@ -20,6 +20,7 @@ width: 25%;
 width: 75%;
 }
 
+
 /* Clear floats despues de las columnas para eliminar la superposición */
 .filla:after {
 content: "";
