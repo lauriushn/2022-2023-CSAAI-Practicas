@@ -5,6 +5,11 @@
     box-sizing: border-box;
   }
   
+body {
+  background-image: url(imagenes/fondo.jpg);
+}
+
+
 /* Crear columnas de ancho diferente que se colocan una a continuación de la otra */
 .columna {
 float: left;
@@ -29,9 +34,13 @@ clear: both;
 }
 
 .titulo {
-  margin-left: 120px;
-  font-family: 'Indie Flower', cursive;
+  text-align: center;
+  color: #aaa;
+  font-size: x-large;
+  /*font-family: 'Indie Flower', cursive; este me gusta más*/
   /*font-family: "Sofia", sans-serif; */
+  /*font-family: 'Creepster', cursive;
+  font-size: 50px; */
 }
 
 #c1 {
