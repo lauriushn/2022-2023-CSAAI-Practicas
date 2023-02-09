@@ -9,6 +9,11 @@ body {
   background-image: url(imagenes/fondo.jpg);
 }
 
+h2 {
+  text-align: center;
+  text-decoration: underline;
+  font-size: x-large;
+}
 
 /* Crear columnas de ancho diferente que se colocan una a continuación de la otra */
 .columna {
@@ -24,7 +29,6 @@ width: 75%;
 .derecha {
 width: 25%;
 }
-
 
 /* Clear floats despues de las columnas para eliminar la superposición */
 .filla:after {
@@ -42,15 +46,27 @@ clear: both;
   /*font-family: "Sofia", sans-serif; */
   /*font-family: 'Creepster', cursive;
   font-size: 50px; */
+
+
+
 }
 
 #c1 {
-    background-color: rgba(255, 255, 255, 0.4);
+    background-color: #aaa;
+    color: rgb(0, 0, 0);
 }
 
 #c2 {
-    background-color:#bbb;
+    background-color: #bbb;
+    color: black;
 }
+
+#Estilo {
+  font-size: medium;
+  margin-top: 2%;
+}
+
+
 
 /* estilos para imágenes https://www.w3schools.com/css/css3_images.asp */
 /* posicionamiento de imágenes https://www.w3schools.com/css/css_positioning.asp */
