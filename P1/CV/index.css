@@ -28,6 +28,12 @@ display: table;
 clear: both;
 }
 
+.titulo {
+  margin-left: 120px;
+  font-family: 'Indie Flower', cursive;
+  /*font-family: "Sofia", sans-serif; */
+}
+
 #c1 {
     background-color:#aaa;
 }
