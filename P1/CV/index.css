@@ -10,7 +10,6 @@ body {
 }
 
 h2 {
-  text-align: center;
   text-decoration: underline;
   font-size: x-large;
 }
@@ -66,6 +65,13 @@ clear: both;
   margin-top: 2%;
 }
 
+#titulo1 {
+  margin-left: 10px;
+}
+
+#titulo2 {
+  text-align: center;
+}
 
 
 /* estilos para imágenes https://www.w3schools.com/css/css3_images.asp */
