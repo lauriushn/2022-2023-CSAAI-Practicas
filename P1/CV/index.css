@@ -75,8 +75,9 @@ clear: both;
 /* posicionamiento de imágenes https://www.w3schools.com/css/css_positioning.asp */
 
 img {
-    width: 100%;
+    width: 60%;
     height: auto;
+    margin-left: 40%;
 }
 
 .iresponsive {
