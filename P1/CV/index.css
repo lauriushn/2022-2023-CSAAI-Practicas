@@ -80,6 +80,11 @@ clear: both;
   margin-left: 20px;
 }
 
+#img1 {
+  height: 100px;
+  width: auto;
+}
+
 /* estilos para imágenes https://www.w3schools.com/css/css3_images.asp */
 /* posicionamiento de imágenes https://www.w3schools.com/css/css_positioning.asp */
 
