@@ -1,0 +1,12 @@
+/* https://www.w3schools.com/howto/howto_css_two_columns.asp */
+/* https://developer.mozilla.org/es/docs/Web/CSS/box-sizing */
+/* Así definimos el comportamiento de caja para todos los elementos */
+* {
+    box-sizing: border-box;
+  }
+
+
+  
+body {
+  background-image: url(imagenes/fondo.jpg);
+}
