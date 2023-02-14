@@ -22,6 +22,7 @@ h3 {
   text-decoration: underline;
 }
 
+
 /* Crear columnas de ancho diferente que se colocan una a continuación de la otra */
 .columna {
 float: left;
@@ -67,6 +68,7 @@ clear: both;
 #c2 {
     background-color: #bbb;
     color: black;
+    text-align: center;
 }
 
 #Estilo {
@@ -78,16 +80,12 @@ clear: both;
   margin-left: 20px;
 }
 
-#img1 {
-  margin-left: 70%;
-}
 /* estilos para imágenes https://www.w3schools.com/css/css3_images.asp */
 /* posicionamiento de imágenes https://www.w3schools.com/css/css_positioning.asp */
 
 img {
     width: 60%;
     height: auto;
-    margin-left: 20%;
     border-radius: 10px 10px 10px 10px;
 }
 
@@ -107,7 +105,8 @@ img {
     }
 
     .iresponsive {
-        width: 60%;
+        width: 100%;
+
     }
 }
 
