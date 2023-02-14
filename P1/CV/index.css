@@ -75,10 +75,10 @@ clear: both;
 /* posicionamiento de imágenes https://www.w3schools.com/css/css_positioning.asp */
 
 img {
-    width: 60%;
+    width: 100%;
     height: auto;
-    margin-left: 40%;
-    border-radius: 5px 5px 5px 5px;
+    /*margin-left: 40%; */
+    border-radius: 10px 10px 10px 10px;
 }
 
 .iresponsive {
