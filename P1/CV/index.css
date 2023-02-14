@@ -4,6 +4,8 @@
 * {
     box-sizing: border-box;
   }
+
+
   
 body {
   background-image: url(imagenes/fondo.jpg);
@@ -25,6 +27,7 @@ h3 {
 float: left;
 padding: 10px;
 min-height: 500px;
+
 }
 
 .izquierda {
