@@ -11,8 +11,7 @@ body {
   background-image: url(imagenes/fondo.jpg);
   margin: 30px;
   color: white;
-  font-family: 'Julee', cursive;
-  font-size: x-large;
+  font-size: large;
   
 }
 
@@ -25,7 +24,8 @@ h1 {
 }
 
 h2 {
-  font-size: auto;
+  font-family: 'Julee', cursive;
+  font-size: large;
 }
 
 /* Clear floats despues de las columnas para eliminar la superposición */
@@ -39,7 +39,7 @@ h2 {
   float: left;
   padding: 20px;
   min-height: 500px;
-  background-color: rgba(105, 105, 105, 0.4);
+  background-color: rgba(77, 77, 77, 0.4);
   margin-bottom: 50px;
 }
   
