@@ -9,4 +9,16 @@
   
 body {
   background-image: url(imagenes/fondo.jpg);
+  
 }
+
+h1 {
+  font-family: 'Creepster', cursive;
+  color: white;
+  font-size: 50px;
+}
+
+
+
+
+
