@@ -26,17 +26,18 @@ h3 {
 /* Crear columnas de ancho diferente que se colocan una a continuación de la otra */
 .columna {
 float: left;
-padding: 10px;
 min-height: 500px;
 
 }
 
 .izquierda {
 width: 75%;
+padding: 20px;
 }
 
 .derecha {
 width: 25%;
+padding: 10px;
 }
 
 /* Clear floats despues de las columnas para eliminar la superposición */
