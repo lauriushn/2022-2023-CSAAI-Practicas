@@ -15,7 +15,8 @@ body {
 h1 {
   font-family: 'Creepster', cursive;
   color: white;
-  font-size: 50px;
+  font-size: 80px;
+  text-shadow: 5px 5px rgb(120, 120, 120);
 }
 
 
