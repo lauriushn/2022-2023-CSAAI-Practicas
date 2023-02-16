@@ -10,6 +10,8 @@
 body {
   background-image: url(imagenes/fondo.jpg);
   margin: 30px;
+  color: white;
+  font-family: 'Julee', cursive;
   
 }
 
