@@ -12,6 +12,7 @@ body {
   margin: 30px;
   color: white;
   font-family: 'Julee', cursive;
+  font-size: x-large;
   
 }
 
@@ -21,6 +22,10 @@ h1 {
   font-size: 80px;
   text-shadow: 5px 5px rgb(120, 120, 120);
   text-align: center;
+}
+
+h2 {
+  font-size: auto;
 }
 
 /* Clear floats despues de las columnas para eliminar la superposición */
@@ -34,7 +39,7 @@ h1 {
   float: left;
   padding: 20px;
   min-height: 500px;
-  background-color: rgb(255, 255, 255, 0.4);
+  background-color: rgba(105, 105, 105, 0.4);
   margin-bottom: 50px;
 }
   
