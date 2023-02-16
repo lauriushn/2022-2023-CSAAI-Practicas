@@ -26,6 +26,8 @@ h3 {
 .columna {
 float: left;
 min-height: 500px;
+margin-bottom: 50px;
+
 
 }
 
@@ -34,12 +36,14 @@ width: 75%;
 padding: 20px;
 /*text-align: center; */
 padding-left: 40px;
+
 }
 
 .derecha {
 width: 25%;
 padding: 10px;
 margin-top: 60px;
+
 }
 
 /* Clear floats despues de las columnas para eliminar la superposición */
