@@ -38,7 +38,7 @@ button {
   font-size: medium;
   text-align: center;
   cursor: pointer;
-
+  
 }
 
 
@@ -90,6 +90,12 @@ button {
   border-radius: 10px;
 }
 
+#gif2 {
+  border-radius: 10px;
+  text-align: center;
+  margin-left: 15%;
+}
+
 #img {
   border-radius: 10px;
   text-align: center;
@@ -104,6 +110,7 @@ button {
 #img2 {
   border-radius: 10px;
 }
+
 
 /* esto lo utilizamos para que se adapte a la pantalla de movil:*/
 @media screen and (max-width: 600px) {
@@ -133,6 +140,14 @@ button {
   
   #gif1 {
     margin-left: 0%;
+    width: auto;
+    height: auto;
+  }
+
+  #gif2 {
+      margin-left: 0%;
+      width: auto;
+      height: auto;
   }
 
   #img {
