@@ -63,8 +63,11 @@ h2 {
   clear: both;
   }
     
-#gif1 {
-  align-items: center;
+
+.iresponsive {
+  padding: 0 6px;
+  float: left;
+  width: 50%;
 }
 
 
