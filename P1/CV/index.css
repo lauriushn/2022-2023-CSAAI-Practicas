@@ -125,6 +125,10 @@ img {
 
 /* esto lo utilizamos para que se adapte a la pantalla de movil:*/
 @media screen and (max-width: 600px) {
+    body {
+      background-image: url(imagenes/fondo.jpg);
+    }
+
     .columna {
       width: 100%;
     }
