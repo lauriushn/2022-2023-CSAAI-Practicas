@@ -29,15 +29,15 @@ h2 {
 }
 
 button {
-  margin-top: 10px;
-  margin-bottom: 0px;
   padding: 5px 15px;
   color: rgb(0, 73, 208);
   background-color: rgb(218, 218, 218);
+  /*text-transform: uppercase; /*capitalización texto*/
   border-radius: 10px;
   font-size: medium;
   text-align: center;
   cursor: pointer;
+  margin-top: 10px;
   
 }
 
