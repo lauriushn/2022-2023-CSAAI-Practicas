@@ -11,7 +11,7 @@ body {
   background-image: url(imagenes/fondo.jpg);
   margin: 30px;
   color: white;
-  font-size: medium;
+  font-size: large;
   
 }
 
@@ -24,33 +24,43 @@ h1 {
 }
 
 h2 {
-  font-family: 'Julee', cursive;
   font-size: 30px;
 }
 
-/* Clear floats despues de las columnas para eliminar la superposición */
-.filla:after {
+
+/* Crear columnas de ancho diferente que se colocan una a continuación de la otra */
+.columna {
+  float: left;
+  min-height: 500px;
+  margin-bottom: 60px;
+  background-color: rgb(155, 155, 155, 0.3);
+  border-radius: 20px;
+  
+  
+  }
+  
+  .izquierda {
+  width: 45%;
+  padding: 20px;
+  /*text-align: center; */
+  padding-left: 40px;
+  margin-left: 10px;
+  
+  }
+  
+  .derecha {
+  width: 45%;
+  padding: 20px;
+  margin-left: 40px;
+  
+  }
+  
+  /* Clear floats despues de las columnas para eliminar la superposición */
+  .filla:after {
   content: "";
   display: table;
   clear: both;
   }
-
-.columna {
-  float: left;
-  padding: 20px;
-  min-height: 500px;
-  background-color: rgba(77, 77, 77, 0.4);
-  margin-bottom: 50px;
-}
-  
-.izquierda {
-  width: 50%;
-}
-    
-.derecha {
-  width: 50%;
-}
-
     
 /* esto lo utilizamos para que se adapte a la pantalla de movil:*/
 @media screen and (max-width: 600px) {
