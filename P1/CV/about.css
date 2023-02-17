@@ -33,9 +33,8 @@ h2 {
   float: left;
   min-height: 500px;
   margin-bottom: 60px;
-  background-color: rgb(155, 155, 155, 0.3);
+  background-color: rgba(70, 70, 70, 0.5);
   border-radius: 20px;
-  
   
   }
   
@@ -65,15 +64,21 @@ h2 {
     
 
 .iresponsive {
-  padding: 0 6px;
+  padding: 0px;
   float: left;
   width: 50%;
 }
 
-#ladoder {
-  margin-left: 45%;
+#gif1{
+  text-align: center;
+  margin-left: 10%;
+  display: flex;
 }
 
+
+#dos {
+  margin-top: -30px;
+}
 
 /* esto lo utilizamos para que se adapte a la pantalla de movil:*/
 @media screen and (max-width: 600px) {
@@ -96,9 +101,15 @@ h2 {
   }
 
   .iresponsive {
-      width: 100%;
-
+      width: auto;
+      height: auto;
+      margin-left: 0px;
   }
+  
+  #gif1 {
+    margin-left: 0%;
+  }
+
 }
 
 /* Más sobre diseño web responsive https://www.w3schools.com/css/css_rwd_intro.asp */
