@@ -129,6 +129,10 @@ img {
       width: 100%;
     }
 
+    .derecha {
+      margin-top: 0px;
+    }
+
     .iresponsive {
         width: 100%;
 

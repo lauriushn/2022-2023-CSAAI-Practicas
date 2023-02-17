@@ -45,6 +45,7 @@ h2 {
   /*text-align: center; */
   padding-left: 40px;
   margin-left: 50px;
+
   
   }
   
@@ -62,6 +63,11 @@ h2 {
   clear: both;
   }
     
+#gif1 {
+  align-items: center;
+}
+
+
 /* esto lo utilizamos para que se adapte a la pantalla de movil:*/
 @media screen and (max-width: 600px) {
   .columna {
