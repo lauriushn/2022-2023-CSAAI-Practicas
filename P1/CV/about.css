@@ -73,8 +73,14 @@ h2 {
   text-align: center;
   margin-left: 10%;
   display: flex;
+  border-radius: 10px;
 }
 
+#img {
+  border-radius: 10px;
+  text-align: center;
+  margin-left: 15%;
+}
 
 #dos {
   margin-top: -30px;
@@ -107,6 +113,10 @@ h2 {
   }
   
   #gif1 {
+    margin-left: 0%;
+  }
+
+  #img {
     margin-left: 0%;
   }
 
