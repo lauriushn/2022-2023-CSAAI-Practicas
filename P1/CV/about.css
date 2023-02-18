@@ -83,18 +83,25 @@ button {
   width: 50%;
 }
 
-#gif1{
+
+.logo img {
+  width: 90%;
+  height: auto;
+  border-radius: 10px;
+
+}
+
+/*#gif1{
   text-align: center;
   margin-left: 10%;
   display: flex;
   border-radius: 10px;
-}
+}*/
 
 #gif2 {
-  border-radius: 10px;
   text-align: center;
-  margin-left: 15%;
-}
+  margin-left: 5%;
+} 
 
 #img {
   border-radius: 10px;
@@ -121,6 +128,7 @@ button {
   .columna {
     width: 100%;
     margin-left: 0px;
+    
   }
 
   .derecha {
@@ -140,14 +148,14 @@ button {
   
   #gif1 {
     margin-left: 0%;
-    width: 70%;
-    height: 70%;
+    width: 90%;
+    height: 90%;
   }
 
   #gif2 {
       margin-left: 10%;
-      width: 70%;
-      height: 70%;
+      width: 90%;
+      height: 90%;
   }
 
   #img {
