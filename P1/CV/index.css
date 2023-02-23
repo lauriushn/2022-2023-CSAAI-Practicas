@@ -112,6 +112,7 @@ img {
     width: 60%;
     height: auto;
     border-radius: 10px 10px 10px 10px;
+    box-shadow: 0 6px 6px 0 rgb(0.0, 0.0, 0.0, 1.0);
 }
 
 .iresponsive {
