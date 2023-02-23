@@ -31,5 +31,14 @@ bt1.onclick = () => {
 //-- Función de retrollamada botón 2
 bt2.onclick = () => {
     pbt2.innerHTML+=" 2";
+    if (pbt2.style.background == "") {
+        pbt2.style.background = "red";
+    }
+    else if (pbt2.style.background == "red"){
+        pbt2.style.background = "blue"
+    }
+    else {
+        pbt2.style.background = "red"
+    }
 }
 
