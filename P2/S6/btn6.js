@@ -16,21 +16,28 @@ const gui = {
   boton_dec2: document.getElementById("boton_dec2"),
 }
 
-//-- Constructor del objeto contador
-//-- Se le pasa como parametro su display
-function counter(display)
-{
-  this.valor = 0;
+//-- Clase counter para crear contadores
+//-- Hay que pasarle como parámetro en el constructor  
+//-- el display usado
+class counter {
 
-  //-- Almacenar su display
-  this.display = display;
+    //-- Constructor del objeto
+    //-- Inicialización de las propiedades
+    constructor(display) {
 
-  //-- Actualizar el contador
-  //-- y mostrarlo en el display
-  this.inc = (value) => {
-    this.valor += value;
-    this.display.innerHTML = this.valor;
-  }
+        //-- Valor del contador
+        this.valor = 0;
+
+        //-- Almacenar su display
+        this.display = display;
+    }
+
+    //-- Método inc para actualizar el contador
+    //-- Y mostrarlo en el display
+    inc(value) {
+        this.valor += value;
+        this.display.innerHTML = this.valor;
+    }
 }
 
 //-- Crear los dos objetos contadores
