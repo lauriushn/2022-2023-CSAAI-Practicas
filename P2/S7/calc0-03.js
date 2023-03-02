@@ -1,7 +1,7 @@
 console.log("Ejecutando JS...");
 
 display = document.getElementById("display")
-suma = document.getElementById("suma")
+//suma = document.getElementById("suma")  //se debería eliminar
 igual = document.getElementById("igual")
 clear = document.getElementById("clear")
 
@@ -22,7 +22,7 @@ for (let boton of digitos) {
 }
 
 operaciones = document.getElementsByClassName('operaciones');
-for (let operacion of operaciones) {
+for (let boton of operaciones) {
     boton.onclick = (ev) => {
         display. innerHTML += ev.target.value;
         console.log('Operacion')
@@ -32,7 +32,7 @@ for (let operacion of operaciones) {
 
 //-------- Resto de funciones de retrollamada
 
-//-- Insertar simbolo de sumar
+//-- Insertar simbolo de sumar  //Se deberia eliminar
 //suma.onclick = (ev) => {
   //display.innerHTML += ev.target.value;
 //}
