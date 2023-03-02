@@ -15,19 +15,37 @@ clear = document.getElementById("clear")
 //-- poniendo a cero o evaluando la expresión
 
 // -- Insertar digito 1
-boton1.onclick = () => {
-  display.innerHTML += boton1.value;
-}
+//boton1.onclick = () => {
+  //display.innerHTML += boton1.value;
+//}
+
+// -- Digito 1
+boton1.onclick = (ev) => {
+    display.innerHTML += ev.target.value;
+  }
 
 //-- Insertar digito 2
-boton2.onclick = () => {
-  display.innerHTML += boton2.value;
-}
+//boton2.onclick = () => {
+  //display.innerHTML += boton2.value;
+//}
+
+//-- Digito 2
+boton2.onclick = (ev) => {
+    display.innerHTML += ev.target.value;
+    }
+
+
 
 //-- Insertar simbolo de sumar
-suma.onclick = () => {
-  display.innerHTML += suma.value;
+//suma.onclick = () => {
+  //display.innerHTML += suma.value;
+//}
+
+// -- Digito 3
+suma.onclick = (ev) => {
+    display.innerHTML += ev.target.value;
 }
+
 
 //-- Evaluar la expresion
 igual.onclick = () => {
