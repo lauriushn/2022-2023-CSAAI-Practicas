@@ -2,6 +2,9 @@ console.log("Ejecutando JS...");
 
 display = document.getElementById("display")
 suma = document.getElementById("suma")
+multiplicacion = document.getElementById("multiplicacion")
+resta = document.getElementById("resta")
+division = document.getElementById("division")
 igual = document.getElementById("igual")
 clear = document.getElementById("clear")
 
@@ -77,6 +80,27 @@ suma.onclick = (ev) => {
     //-- a OPERATION (según el diagrama de estados)
   
 }
+
+//-- Operación de restar
+resta.onclick = (ev) => {
+    display.innerHTML += ev.target.value;
+}
+
+
+
+//-- Operación de multiplicar
+multiplicacion.onclick = (ev) => {
+
+    //-- Insertar simbolo de multiplicación
+    display.innerHTML += ev.target.value;
+}
+
+//-- Operación de dividir
+division.onclick = (ev) => {
+    display.innerHTML += ev.target.value;
+}
+
+
 
 //-- Evaluar la expresión
 igual.onclick = () => {
