@@ -58,7 +58,7 @@ function digito(ev)
     //-- sino que lo mostramos directamente en el display
     if (estado == ESTADO.INIT) {
 
-        display.innerHTML = ev.target.value;
+        display2.innerHTML = ev.target.value;
 
         //-- Pasar al siguiente estado
         estado = ESTADO.OP1;
@@ -66,7 +66,7 @@ function digito(ev)
     } else {
        
         //--En cualquier otro estado lo añadimos
-        display.innerHTML += ev.target.value;
+        display2.innerHTML += ev.target.value;
 
         //-- Y nos quedamos en el mismo estado
         //-- Ojo! Este ejemplo sólo implementa el primer
@@ -78,25 +78,29 @@ function digito(ev)
 
 
 digitos = document.getElementsByClassName("digito")
-//-------- Resto de funciones de retrollamada
 
+for (let boton of digitos) {
 
-
-start.onclick = () => {
-    console.log('hola')
-    if (estado == ESTADO.INIT) {
-
-        display.innerHTML = ev.target.value;
-
-        //-- Pasar al siguiente estado
-        estado = ESTADO.OP1;
-
-    } else {
-       
-        //--En cualquier otro estado lo añadimos
-        display.innerHTML += ev.target.value;
-
+    //-- Se ejecuta cuando se pulsa un boton
+    //-- que es un dígito. Para que el código sea 
+    //-- mas legible la función de retrollamada se
+    //-- escribe como una función normal (digito)
+    boton.onclick = digito;
 }
+
+//-------- Resto de funciones de retrollamada
+const crono = new Crono(gui.display);
+
+
+gui.start.onclick = () => {
+    console.log("start");
+    crono.start();
+}
+  
+//-- Detener el cronómetro
+gui.stop.onclick = () => {
+    console.log("stop");
+    crono.stop();
 }
 
 //-- Poner a cero la expresión
@@ -107,10 +111,9 @@ clear.onclick = () => {
     secretkey = [];
     randomkey  = getRandomInt(0, 9)
     console.log(secretkey) // Para ver una vez hacemos reset si se limpia y rellena de nuevo nuestro array secretkey
+    crono.reset();
     
   }
-
-
 
 // Del profe:
 
