@@ -6,13 +6,17 @@ function getRandomInt(min, max) {
     var randomkey2 = Math.floor(Math.random() * (max - min)) + min;
     var randomkey3 = Math.floor(Math.random() * (max - min)) + min;
     var randomkey4 = Math.floor(Math.random() * (max - min)) + min;
-    document.getElementById('contador1').innerHTML = randomkey1;
+    //document.getElementById('contador1').innerHTML = randomkey1;
+    document.getElementById("contador1").innerHTML = "*"
     secretkey.push(randomkey1);
-    document.getElementById('contador2').innerHTML = randomkey2;
+    //document.getElementById('contador2').innerHTML = randomkey2;
+    document.getElementById("contador2").innerHTML = "*"
     secretkey.push(randomkey2);
-    document.getElementById('contador3').innerHTML = randomkey3;
+    //document.getElementById('contador3').innerHTML = randomkey3;
+    document.getElementById("contador3").innerHTML = "*"
     secretkey.push(randomkey3);
-    document.getElementById('contador4').innerHTML = randomkey4;
+    //document.getElementById('contador4').innerHTML = randomkey4;
+    document.getElementById("contador4").innerHTML = "*"
     secretkey.push(randomkey4);
 }
 
@@ -76,8 +80,7 @@ function digito(ev)
 digitos = document.getElementsByClassName("digito")
 //-------- Resto de funciones de retrollamada
 
-const crono = new Crono(display2)
-document.getElementById('crono') = crono
+
 
 start.onclick = () => {
     console.log('hola')
