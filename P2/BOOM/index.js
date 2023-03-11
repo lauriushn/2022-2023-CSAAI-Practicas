@@ -33,7 +33,7 @@ const gui = {
     reset : document.getElementById("reset")
 }
 
-
+var valores = [];
 
 
 //-- Estados de la calculadora
@@ -59,14 +59,20 @@ function digito(ev)
     if (estado == ESTADO.INIT) {
 
         display2.innerHTML = ev.target.value;
+        valores.push(ev.target.value);
+        console.log(valores);
 
         //-- Pasar al siguiente estado
         estado = ESTADO.OP1;
+        crono.start();
 
     } else {
        
         //--En cualquier otro estado lo añadimos
         display2.innerHTML += ev.target.value;
+        valores.push(ev.target.value);
+        console.log(valores);
+        
 
         //-- Y nos quedamos en el mismo estado
         //-- Ojo! Este ejemplo sólo implementa el primer
@@ -87,6 +93,9 @@ for (let boton of digitos) {
     //-- escribe como una función normal (digito)
     boton.onclick = digito;
 }
+
+//HACER ALGO PA COMPARAR LOS VALORES DE SECRETKEY Y DE VALORES PARA QUE SI COINCIDEN ALGUNO CON ALGUNO CAMBIE EL ASTERISCO POR EL DIGITO!!
+
 
 //-------- Resto de funciones de retrollamada
 const crono = new Crono(gui.display);
@@ -109,6 +118,7 @@ clear.onclick = () => {
     display2.innerHTML = "0";
     estado = ESTADO.INIT;
     secretkey = [];
+    valores = [];
     randomkey  = getRandomInt(0, 9)
     console.log(secretkey) // Para ver una vez hacemos reset si se limpia y rellena de nuevo nuestro array secretkey
     crono.reset();
