@@ -2,10 +2,10 @@
 var secretkey = [];
 
 function getRandomInt(min, max) {
-    var randomkey1 = Math.floor(Math.random() * (max - min)) + min;
-    var randomkey2 = Math.floor(Math.random() * (max - min)) + min;
-    var randomkey3 = Math.floor(Math.random() * (max - min)) + min;
-    var randomkey4 = Math.floor(Math.random() * (max - min)) + min;
+    randomkey1 = Math.floor(Math.random() * (max - min)) + min;
+    randomkey2 = Math.floor(Math.random() * (max - min)) + min;
+    randomkey3 = Math.floor(Math.random() * (max - min)) + min;
+    randomkey4 = Math.floor(Math.random() * (max - min)) + min;
     //document.getElementById('contador1').innerHTML = randomkey1;
     document.getElementById("contador1").innerHTML = "*"
     secretkey.push(randomkey1);
@@ -30,7 +30,11 @@ const gui = {
     display2 : document.getElementById("display2"),
     start : document.getElementById("start"),
     stop : document.getElementById("stop"),
-    reset : document.getElementById("reset")
+    reset : document.getElementById("reset"),
+    contador1 : document.getElementById("contador1"),
+    contador2 : document.getElementById("contador2"),
+    contador3 : document.getElementById("contador3"),
+    contador4 : document.getElementById("contador4"),
 }
 
 var valores = [];
@@ -61,10 +65,22 @@ function digito(ev)
         display2.innerHTML = ev.target.value;
         valores.push(ev.target.value);
         console.log(valores);
+        if (randomkey1 == ev.target.value) {
+            gui.contador1.innerHTML = randomkey1
+        } else if (randomkey2 == ev.target.value) {
+            gui.contador2.innerHTML = randomkey2
+        } else if (randomkey3 == ev.target.value) {
+            gui.contador3.innerHTML = randomkey3
+        } else if (randomkey4 == ev.target.value) {
+            gui.contador4.innerHTML = randomkey4
+        }
 
         //-- Pasar al siguiente estado
         estado = ESTADO.OP1;
         crono.start();
+
+       
+
 
     } else {
        
@@ -72,6 +88,16 @@ function digito(ev)
         display2.innerHTML += ev.target.value;
         valores.push(ev.target.value);
         console.log(valores);
+        if (randomkey1 == ev.target.value) {
+            gui.contador1.innerHTML = randomkey1
+        } else if (randomkey2 == ev.target.value) {
+            gui.contador2.innerHTML = randomkey2
+        } else if (randomkey3 == ev.target.value) {
+            gui.contador3.innerHTML = randomkey3
+        } else if (randomkey4 == ev.target.value) {
+            gui.contador4.innerHTML = randomkey4
+        }
+
         
 
         //-- Y nos quedamos en el mismo estado
@@ -91,7 +117,9 @@ for (let boton of digitos) {
     //-- que es un dígito. Para que el código sea 
     //-- mas legible la función de retrollamada se
     //-- escribe como una función normal (digito)
-    boton.onclick = digito;
+    boton.onclick = (ev) => {
+        digito(ev);
+}
 }
 
 //HACER ALGO PA COMPARAR LOS VALORES DE SECRETKEY Y DE VALORES PARA QUE SI COINCIDEN ALGUNO CON ALGUNO CAMBIE EL ASTERISCO POR EL DIGITO!!
@@ -121,6 +149,7 @@ clear.onclick = () => {
     valores = [];
     randomkey  = getRandomInt(0, 9)
     console.log(secretkey) // Para ver una vez hacemos reset si se limpia y rellena de nuevo nuestro array secretkey
+    crono.stop();
     crono.reset();
     
   }
