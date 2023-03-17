@@ -43,6 +43,7 @@ const gui = {
 const ESTADO = {
     INIT: 0,
     OP1: 1,
+    OP2: 2,
 
 }
 
@@ -84,7 +85,29 @@ function digito(ev)
         //-- Pasar al siguiente estado
         estado = ESTADO.OP1;
         crono.start();
-     
+
+
+    }else if (estado == ESTADO.OP1){
+
+        //display2.innerHTML = ev.target.value;
+        if (randomkey1 == ev.target.value) {
+            gui.contador1.innerHTML = randomkey1
+            contador1.style.color = "green";
+            randomkey1 = 20;
+        } else if (randomkey2 == ev.target.value) {
+            gui.contador2.innerHTML = randomkey2
+            contador2.style.color = "green";
+            randomkey2 = 20;
+        } else if (randomkey3 == ev.target.value) {
+            gui.contador3.innerHTML = randomkey3
+            contador3.style.color = "green";
+            randomkey3 = 20;
+        } else if (randomkey4 == ev.target.value) {
+            gui.contador4.innerHTML = randomkey4
+            contador4.style.color = "green";
+            randomkey4 = 20;
+        }
+        estado = ESTADO.OP2;
 
 
     } else {
@@ -108,14 +131,7 @@ function digito(ev)
             contador4.style.color = "green";
             randomkey4 = 20;
         }    
-        if ((randomkey1==randomkey2)||(randomkey1==randomkey3)||(randomkey1==randomkey4)){
-            gui.display2.innerHTML = "Ya queda menos...";
-
-        } else if ((randomkey2==randomkey3)||(randomkey2==randomkey4)){
-            gui.display2.innerHTML = "Ya queda menos...";
-        } else if (randomkey3 == randomkey4){
-            gui.display2.innerHTML = "Ya queda menos...";
-        }
+        gui.display2.innerHTML = "Ya queda menos..."
 
 
 
