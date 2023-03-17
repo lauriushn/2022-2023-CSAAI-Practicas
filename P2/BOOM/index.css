@@ -35,7 +35,7 @@ img {
 
 .clave {
     text-align: center;
-    color: rgb(192, 0, 0);
+    color: red
     margin: 1em;
 	display: flex;
 	justify-content: center;

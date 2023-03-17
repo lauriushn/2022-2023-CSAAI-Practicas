@@ -43,6 +43,7 @@ const gui = {
 const ESTADO = {
     INIT: 0,
     OP1: 1,
+
 }
 
  //-- Variable de estado de la calculadora
@@ -64,12 +65,20 @@ function digito(ev)
         //display2.innerHTML = ev.target.value;
         if (randomkey1 == ev.target.value) {
             gui.contador1.innerHTML = randomkey1
+            contador1.style.color = "green";
+            randomkey1 = [];
         } else if (randomkey2 == ev.target.value) {
             gui.contador2.innerHTML = randomkey2
+            contador2.style.color = "green";
+            randomkey2 = [];
         } else if (randomkey3 == ev.target.value) {
             gui.contador3.innerHTML = randomkey3
+            contador3.style.color = "green";
+            randomkey3 = [];
         } else if (randomkey4 == ev.target.value) {
             gui.contador4.innerHTML = randomkey4
+            contador4.style.color = "green";
+            randomkey4 = [];
         }
 
         //-- Pasar al siguiente estado
@@ -84,24 +93,24 @@ function digito(ev)
         //display2.innerHTML += ev.target.value;
         if (randomkey1 == ev.target.value) {
             gui.contador1.innerHTML = randomkey1
+            contador1.style.color = "green";
+            randomkey1 = [];
         } else if (randomkey2 == ev.target.value) {
             gui.contador2.innerHTML = randomkey2
+            contador2.style.color = "green";
+            randomkey2 = [];
         } else if (randomkey3 == ev.target.value) {
             gui.contador3.innerHTML = randomkey3
+            contador3.style.color = "green";
+            randomkey3 = [];
         } else if (randomkey4 == ev.target.value) {
             gui.contador4.innerHTML = randomkey4
+            contador4.style.color = "green";
+            randomkey4 = [];
         }
-
-        
-
-        //-- Y nos quedamos en el mismo estado
-        //-- Ojo! Este ejemplo sólo implementa el primer
-        //-- estado del diagrama. Habría que tener en 
-        //-- cuenta el resto... lo debes hacer en tu práctica
-    } 
     
+    }
 }
-
 
 digitos = document.getElementsByClassName("digito")
 
@@ -140,11 +149,15 @@ clear.onclick = () => {
     //display2.innerHTML = "0";
     estado = ESTADO.INIT;
     secretkey = [];
-    valores = [];
     randomkey  = getRandomInt(0, 9)
     console.log(secretkey) // Para ver una vez hacemos reset si se limpia y rellena de nuevo nuestro array secretkey
     crono.stop();
     crono.reset();
+    contador1.style.color = "red";
+    contador2.style.color = "red";
+    contador3.style.color = "red";
+    contador4.style.color = "red";
+
     
   }
 
