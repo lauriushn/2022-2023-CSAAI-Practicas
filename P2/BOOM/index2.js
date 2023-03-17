@@ -107,8 +107,7 @@ function digito(ev)
             gui.contador4.innerHTML = randomkey4
             contador4.style.color = "green";
             randomkey4 = [];
-        }
-    
+        }    
     }
 }
 
@@ -125,8 +124,10 @@ for (let boton of digitos) {
 }
 }
 
-//HACER ALGO PA COMPARAR LOS VALORES DE SECRETKEY Y DE VALORES PARA QUE SI COINCIDEN ALGUNO CON ALGUNO CAMBIE EL ASTERISCO POR EL DIGITO!!
-
+if (secretkey.length == 0) {
+    crono.stop();
+    console.log('hola')
+}
 
 //-------- Resto de funciones de retrollamada
 const crono = new Crono(gui.display);
