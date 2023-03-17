@@ -37,7 +37,6 @@ const gui = {
     contador4 : document.getElementById("contador4"),
 }
 
-var valores = [];
 
 
 //-- Estados de la calculadora
@@ -63,8 +62,6 @@ function digito(ev)
     if (estado == ESTADO.INIT) {
 
         display2.innerHTML = ev.target.value;
-        valores.push(ev.target.value);
-        console.log(valores);
         if (randomkey1 == ev.target.value) {
             gui.contador1.innerHTML = randomkey1
         } else if (randomkey2 == ev.target.value) {
@@ -77,17 +74,13 @@ function digito(ev)
 
         //-- Pasar al siguiente estado
         estado = ESTADO.OP1;
-        crono.start();
-
-       
+        crono.start();     
 
 
     } else {
        
         //--En cualquier otro estado lo añadimos
         display2.innerHTML += ev.target.value;
-        valores.push(ev.target.value);
-        console.log(valores);
         if (randomkey1 == ev.target.value) {
             gui.contador1.innerHTML = randomkey1
         } else if (randomkey2 == ev.target.value) {
@@ -97,8 +90,6 @@ function digito(ev)
         } else if (randomkey4 == ev.target.value) {
             gui.contador4.innerHTML = randomkey4
         }
-
-        
 
         //-- Y nos quedamos en el mismo estado
         //-- Ojo! Este ejemplo sólo implementa el primer
@@ -121,8 +112,6 @@ for (let boton of digitos) {
         digito(ev);
 }
 }
-
-//HACER ALGO PA COMPARAR LOS VALORES DE SECRETKEY Y DE VALORES PARA QUE SI COINCIDEN ALGUNO CON ALGUNO CAMBIE EL ASTERISCO POR EL DIGITO!!
 
 
 //-------- Resto de funciones de retrollamada
