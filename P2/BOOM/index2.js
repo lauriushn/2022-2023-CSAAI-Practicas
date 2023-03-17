@@ -31,8 +31,10 @@ const gui = {
     start : document.getElementById("start"),
     stop : document.getElementById("stop"),
     reset : document.getElementById("reset"),
-    contadores : document.getElementsByClassName("contador"),
-
+    contador1 : document.getElementById("contador1"),
+    contador2 : document.getElementById("contador2"),
+    contador3 : document.getElementById("contador3"),
+    contador4 : document.getElementById("contador4"),
 }
 
 
@@ -164,6 +166,7 @@ clear.onclick = () => {
 //for (let j = 0; j < long; j++){
     //console.log(secretkey[j]);
 //}
+
 
 
 
