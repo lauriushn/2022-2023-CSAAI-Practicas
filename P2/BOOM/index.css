@@ -1,0 +1,100 @@
+* {
+    box-sizing: border-box;
+  }
+
+body{
+    background-image: url(imagenes/fondo.jpg);
+
+
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    text-shadow: 5px 5px rgb(88, 88, 88);
+    font-size: 60px;
+}
+
+button {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 20px;
+    margin-right: 5px;
+    margin-left: 5px;
+
+}
+
+img {
+    text-align: center;
+    margin-top: 20px;
+    width: 13%;
+    height: 10%;
+}
+
+
+.clave {
+    text-align: center;
+    color: rgb(192, 0, 0);
+    margin: 1em;
+	display: flex;
+	justify-content: center;
+}
+
+
+.contador {
+    margin: 5px;
+    margin-top: 10px;
+	display: flex;
+	padding: 20px;
+	text-align: center;
+	font-size: 30px;
+	background-color: #f0f0f0;
+	border-radius: 10px;
+    box-shadow: 10px 10px rgb(88, 88, 88);
+
+}
+
+#displays {
+    text-align: center;
+    color: rgb(192, 0, 0);
+    display: flex;
+    margin: 1em;
+    justify-content: center;
+ 
+}
+
+#display {
+    text-align: center;
+    display: flex;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    font-size: 25px;
+    margin: 20px;
+
+}
+
+.fila {
+    margin-left: 20px;
+    margin-right: 15px;
+    text-align: center;
+}
+
+.filaultima {
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: center;
+}
+
+
+@media (max-width: 600px) {
+    img{
+        text-align: center;
+        width: 100%;
+        height: 100%;
+
+    }
+    
+}
+

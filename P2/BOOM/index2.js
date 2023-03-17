@@ -27,7 +27,7 @@ console.log(secretkey);
 //-- Elementos de la gui
 const gui = {
     display : document.getElementById("display"),
-    display2 : document.getElementById("display2"),
+    //display2 : document.getElementById("display2"),
     start : document.getElementById("start"),
     stop : document.getElementById("stop"),
     reset : document.getElementById("reset"),
@@ -61,7 +61,7 @@ function digito(ev)
     //-- sino que lo mostramos directamente en el display
     if (estado == ESTADO.INIT) {
 
-        display2.innerHTML = ev.target.value;
+        //display2.innerHTML = ev.target.value;
         if (randomkey1 == ev.target.value) {
             gui.contador1.innerHTML = randomkey1
         } else if (randomkey2 == ev.target.value) {
@@ -81,7 +81,7 @@ function digito(ev)
     } else {
        
         //--En cualquier otro estado lo añadimos
-        display2.innerHTML += ev.target.value;
+        //display2.innerHTML += ev.target.value;
         if (randomkey1 == ev.target.value) {
             gui.contador1.innerHTML = randomkey1
         } else if (randomkey2 == ev.target.value) {
@@ -137,7 +137,7 @@ gui.stop.onclick = () => {
 //-- Poner a cero la expresión
 //-- Y volver al estado inicial
 clear.onclick = () => {
-    display2.innerHTML = "0";
+    //display2.innerHTML = "0";
     estado = ESTADO.INIT;
     secretkey = [];
     valores = [];
