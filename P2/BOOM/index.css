@@ -55,11 +55,11 @@ img {
 
 }
 
-#displays {
+.displays {
     text-align: center;
     color: rgb(192, 0, 0);
     display: flex;
-    margin: 1em;
+    margin: auto;
     justify-content: center;
  
 }
@@ -72,6 +72,20 @@ img {
     border-radius: 10px;
     font-size: 25px;
     margin: 20px;
+    margin-top: 4px;
+
+}
+
+#display2 {
+    color: blue;
+    text-align: center;
+    display: flex;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    font-size: 25px;
+    margin: 20px;
+
 
 }
 
