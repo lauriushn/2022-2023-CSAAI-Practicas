@@ -89,7 +89,17 @@ gui.disparo.onclick = () => {
     console.log('dispara')
     crono.start();
     
+    //coordenadas iniciales de la bala de disparo:
+    x = 5;
+    y = 140;
+
+    //Velocidad horizontal de la bala: velx
+    //Velocidad vertical de la bala: vely
+
+
     
+
+    //HACER LA FÍSICA PARA LA BALA DE DISPARO !!!!!!!!!!!!!!!!!!!!!!!!!!!
     //-- Funcion principal de animacion
     function update() 
     {
