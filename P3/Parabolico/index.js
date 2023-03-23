@@ -25,9 +25,10 @@ const gui = {
     display2 : document.getElementById("display2"),
     disparo : document.getElementById("disparo"),
     reset : document.getElementById("reset"),
-    timer : document.getElementById("timer"),
+    display : document.getElementById("display"),
 }
 
+const crono = new Crono(gui.display);
 
 ctx.beginPath();
     //-- Dibujar un circulo: coordenadas x,y del centro
@@ -89,6 +90,8 @@ gui.disparo.onclick = () => {
 
 gui.reset.onclick = () => {
     console.log('reinicio')
+    crono.stop();
+    crono.reset();
 }
 
 
