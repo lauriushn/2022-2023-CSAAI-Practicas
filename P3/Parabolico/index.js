@@ -52,10 +52,26 @@ ctx.beginPath();
     
 ctx.closePath()
 
-angulo.oninput = () => {
+
+//Ángulo:
+angulo.onchange = () => {
     display1.innerHTML = angulo.value;
 }
 
-velocidad.oninput = () => {
+//Velocidad:
+velocidad.onchange = () => {
   display2.innerHTML = velocidad.value;
+  velx = velocidad.value;
+  vely = velocidad.value;
+
+  //Velocidad por consola
+    console.log('velocidad:');
+    console.log(velx);
+    console.log(vely);
 }
+
+
+
+
+
+
