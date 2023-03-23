@@ -19,6 +19,15 @@ canvas.height = 150;
 //-- Obtener el contexto del canvas
 const ctx = canvas.getContext("2d");
 
+//Elementos gui:
+const gui = {
+    display1 : document.getElementById("display1"),
+    display2 : document.getElementById("display2"),
+    disparo : document.getElementById("disparo"),
+    reset : document.getElementById("reset"),
+    timer : document.getElementById("timer"),
+}
+
 
 ctx.beginPath();
     //-- Dibujar un circulo: coordenadas x,y del centro
@@ -56,6 +65,8 @@ ctx.closePath()
 //Ángulo:
 angulo.onchange = () => {
     display1.innerHTML = angulo.value;
+    angle = angulo.value;
+    console.log(angle)
 }
 
 //Velocidad:
@@ -70,8 +81,15 @@ velocidad.onchange = () => {
     console.log(vely);
 }
 
+gui.disparo.onclick = () => {
+    console.log('dispara')
+    crono.start();
+    
+}
 
-
+gui.reset.onclick = () => {
+    console.log('reinicio')
+}
 
 
 
