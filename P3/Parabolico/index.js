@@ -48,8 +48,7 @@ ctx.beginPath();
 ctx.closePath()
 
 ctx.beginPath();
-    //-- Dibujar un circulo: coordenadas x,y del centro
-    //-- Radio, Angulo inicial y angulo final
+    //-- Dibujar cuadrado
     ctx.rect(4, 127, 20, 20);
     ctx.strokeStyle = 'green';
     ctx.lineWidth = 2;
