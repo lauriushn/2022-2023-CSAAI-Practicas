@@ -1,3 +1,4 @@
+
 console.log("Ejecutando JS...");
 
 
@@ -97,9 +98,10 @@ gui.disparo.onclick = () => {
     //Velocidad vertical de la bala: vely
 
 
-    
+
 
     //HACER LA FÍSICA PARA LA BALA DE DISPARO !!!!!!!!!!!!!!!!!!!!!!!!!!!
+
     //-- Funcion principal de animacion
     function update() 
     {
