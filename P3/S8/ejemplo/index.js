@@ -67,13 +67,11 @@ angulo.onchange = () => {
 //-- Velocidad del proyectil
 velocidad.onchange = () => {
     display2.innerHTML = velocidad.value;
-    velp = 0.1*velocidad.value;  //Ponemos el 0.1 multiplicando porque si no desaparece al momento del canvas, porque es demasiado.
+    velp = 0.1*velocidad.value;  //Ponemos el 0.1 multiplicando porque si no desaparece al momento del canvas, porque es demasiada velocidad.
     velx = velp*Math.cos((angle*Math.PI)/180); //velocidad en el eje x
     vely = velp*Math.sin((angle*Math.PI)/180); //velocidad en el eje y
     
 }
-
-
 
 
 //-- Función principal de actualización
