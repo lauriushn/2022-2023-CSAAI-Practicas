@@ -83,27 +83,9 @@ function lanzar()
     let t=0;
     velx = velp*Math.cos((angle*Math.PI)/180); //velocidad en el eje x
     vely = velp*Math.sin((angle*Math.PI)/180); //velocidad en el eje y
-    t_vuelo = 2*vely/g;
-    t_mitad = t_vuelo/2;
 
-    //Hacer algo que el tiempo vaya creciendo
-    for (t=0; t<10; t++){
-        if (t <= t_vuelo) {
-            if (t <= t_mitad) {
-                xp = xp + velx;
-                yp = yp - vely;
-
-            } else {
-                xp = xp + velx;
-                yp = yp + vely;
-                t += 1;
-            }
-            
-        } else {
-            console.log('stop');
-        }
-    }
-        
+    xp = xp + velx*t;
+    yp = yp - vely*t + 0.5*g*t*t;
     
 
     //-- 2) Borrar el canvas
