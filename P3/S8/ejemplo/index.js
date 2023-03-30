@@ -178,4 +178,4 @@ btnIniciar.onclick = () => {
 
 
 
-// https://www.fisicalab.com/apartado/movimiento-parabolico
+//-- https://www.fisicalab.com/apartado/movimiento-parabolico
