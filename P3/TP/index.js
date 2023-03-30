@@ -72,7 +72,7 @@ velocidad.onchange = () => {
     
 }
 
-
+let t=0;
 //-- Función principal de actualización
 function lanzar() 
 {
@@ -80,12 +80,14 @@ function lanzar()
 
     //-- 1) Actualizar posición de los elementos
     g = 0.1*9.8; //gravedad
-    let t=0;
+    
     velx = velp*Math.cos((angle*Math.PI)/180); //velocidad en el eje x
     vely = velp*Math.sin((angle*Math.PI)/180); //velocidad en el eje y
 
     xp = xp + velx*t;
     yp = yp - vely*t + 0.5*g*t*t;
+     
+    t += 0.1;
     
 
     //-- 2) Borrar el canvas
@@ -99,6 +101,7 @@ function lanzar()
     ldy = 51;
     pcolor = 'blue';
     dibujarP(xp, yp, ldx, ldy, pcolor); // Pintar el proyectil
+    setInterval(dibujarP)
 
     //-- 4) Repetir
     requestAnimationFrame(lanzar);
