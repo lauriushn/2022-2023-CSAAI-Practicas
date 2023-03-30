@@ -80,10 +80,13 @@ function lanzar()
   //-- Implementación del algoritmo de animación:
 
   //-- 1) Actualizar posición de los elementos
-  g = 9.8; //gravedad
-
-  xp = xp + velx;
-  yp = yp - vely + (1/2)*0.2*g;
+  g = 0.1*9.8; //gravedad
+  let t=0;
+ //Hacer algo que el tiempo vaya creciendo
+ 
+    
+  xp = xp + velx*t;
+  yp = yp - vely*t + (1/2)*g*Math.pow(t,2);
 
   //-- 2) Borrar el canvas
   ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -175,3 +178,4 @@ btnIniciar.onclick = () => {
 
 
 
+// https://www.fisicalab.com/apartado/movimiento-parabolico
