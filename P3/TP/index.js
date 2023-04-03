@@ -92,11 +92,19 @@ function lanzar()
     t += 0.1;
 
     //Commparar posiciones:
-    iniciorango = xo - 2;
-    finrango = xo + 2;
-
-    if (xp >= iniciorango && xp <= finrango && yp == yo) {
+    iniciorangox = xo - 20;
+    finrangox = xo + 20;
+    rangox = (xp >= iniciorangox && xp <= finrangox);
+    //console.log(rangox);
+    iniciorangoy = yo-20;
+    finrangoy = yo+20;
+    rangoy = (yp >= iniciorangoy && yp <= finrangoy);
+    //rango = (rangox && rangoy);
+    //console.log(rango);
+    
+    if (rangox && rangoy) {
         console.log('hola');
+        
 
     }
     
