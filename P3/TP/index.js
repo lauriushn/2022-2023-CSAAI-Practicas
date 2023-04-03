@@ -68,6 +68,7 @@ angulo.onchange = () => {
 velocidad.onchange = () => {
     display2.innerHTML = velocidad.value;
     velp = 0.1*velocidad.value;  //Ponemos el 0.1 multiplicando porque si no desaparece al momento del canvas, porque es demasiada velocidad.
+    //console.log(velp);
     
     
 }
@@ -79,6 +80,7 @@ function lanzar()
     //-- Implementación del algoritmo de animación:
 
     //-- 1) Actualizar posición de los elementos
+    //Física:
     g = 0.1*9.8; //gravedad
     
     velx = velp*Math.cos((angle*Math.PI)/180); //velocidad en el eje x
@@ -88,6 +90,15 @@ function lanzar()
     yp = yp - vely*t + 0.5*g*t*t;
      
     t += 0.1;
+
+    //Commparar posiciones:
+    iniciorango = xo - 2;
+    finrango = xo + 2;
+
+    if (xp >= iniciorango && xp <= finrango && yp == yo) {
+        console.log('hola');
+
+    }
     
 
     //-- 2) Borrar el canvas
@@ -180,5 +191,3 @@ btnIniciar.onclick = () => {
 }
 
 
-
-// https://www.fisicalab.com/apartado/movimiento-parabolico
