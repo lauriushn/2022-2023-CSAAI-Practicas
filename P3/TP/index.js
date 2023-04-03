@@ -24,6 +24,7 @@ let ocolor = 'red';
 const display = document.getElementById("display");  //Cronometro
 const display1 = document.getElementById("display1");  //Ángulo de disparo
 const display2 = document.getElementById("display2");  //Velocidad de disparo
+const mensaje = document.getElementById("mensaje"); //Mensaje de victoria o derrota
 
 //-- Cronómetro
 const crono = new Crono(display);
@@ -104,10 +105,21 @@ function lanzar()
     
     if (rangox && rangoy) {
         console.log('hola');
+        crono.stop();
+        mensaje.innerHTML = "¡ENHORABUENA!"
+        cancelAnimationFrame(repetir);
+        return;
         
+        
+    }else if (!(rangox) && rangoy) {
 
-    }
-    
+        console.log('adios');
+        crono.stop();
+        mensaje.innerHTML = "¡QUE LÁSTIMA, A LA PRÓXIMA HABRÁ MÁS SUERTE!"
+        cancelAnimationFrame(repetir);
+        return;
+
+    }     
 
     //-- 2) Borrar el canvas
     ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -123,7 +135,8 @@ function lanzar()
     setInterval(dibujarP)
 
     //-- 4) Repetir
-    requestAnimationFrame(lanzar);
+    repetir = requestAnimationFrame(lanzar);
+    
 }
 
 //-- Otras funciones....
