@@ -93,8 +93,8 @@ function lanzar()
     t += 0.1;
 
     //Commparar posiciones:
-    iniciorangox = xo - 20;
-    finrangox = xo + 20;
+    iniciorangox = xo - 50;
+    finrangox = xo + 50;
     rangox = (xp >= iniciorangox && xp <= finrangox);
     //console.log(rangox);
     iniciorangoy = yo-20;
@@ -106,7 +106,8 @@ function lanzar()
     if (rangox && rangoy) {
         console.log('hola');
         crono.stop();
-        mensaje.innerHTML = "¡ENHORABUENA!"
+        alert("¡ASÍ SE HACE, ERES UN/A MÁQUINA!");
+        mensaje.innerHTML = "¡ENHORABUENA! Pulse Inciar si quiere seguir jugando"
         cancelAnimationFrame(repetir);
         return;
         
@@ -115,7 +116,8 @@ function lanzar()
 
         console.log('adios');
         crono.stop();
-        mensaje.innerHTML = "¡QUE LÁSTIMA, A LA PRÓXIMA HABRÁ MÁS SUERTE!"
+        alert("¡QUE LÁSTIMA, A LA PRÓXIMA HABRÁ MÁS SUERTE!");
+        mensaje.innerHTML = "Pulse Inciar si quiere seguir jugando"
         cancelAnimationFrame(repetir);
         return;
 
