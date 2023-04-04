@@ -1,5 +1,3 @@
-
-
 //-- Declaración de variables y objetos
 
 
@@ -98,14 +96,14 @@ function lanzar()
     finrangox = xo + 60;
     rangox = (xp >= iniciorangox && xp <= finrangox);
     //console.log(rangox);
-    iniciorangoy = yo - 30;
-    finrangoy = yo + 30;
+    iniciorangoy = yo-20;
+    finrangoy = yo+20;
     rangoy = (yp >= iniciorangoy && yp <= finrangoy);
     //rango = (rangox && rangoy);
     //console.log(rango);
     
     if (rangox && rangoy) {
-        //console.log('hola');
+        console.log('hola');
         crono.stop();
         alert("¡ASÍ SE HACE, ERES UN/A MÁQUINA!");
         mensaje.innerHTML = "¡ENHORABUENA! Pulse Inciar si quiere seguir jugando"
@@ -115,7 +113,7 @@ function lanzar()
         
     }else if (!(rangox) && rangoy) {
 
-        //console.log('adios');
+        console.log('adios');
         crono.stop();
         alert("¡QUE LÁSTIMA, A LA PRÓXIMA HABRÁ MÁS SUERTE!");
         mensaje.innerHTML = "Pulse Inciar si quiere seguir jugando"
