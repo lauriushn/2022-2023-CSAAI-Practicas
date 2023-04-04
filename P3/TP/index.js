@@ -88,7 +88,7 @@ function lanzar()
     vely = velp*Math.sin((angle*Math.PI)/180); //velocidad en el eje y
 
     xp = xp + velx*t;
-    yp = yp - vely*t + 0.5*g*t*t;
+    yp = yp - vely*t + (1/2)*g*t*t;
      
     t += 0.1;
 
@@ -104,7 +104,7 @@ function lanzar()
     //console.log(rango);
     
     if (rangox && rangoy) {
-        console.log('hola');
+        //console.log('hola');
         crono.stop();
         alert("¡ASÍ SE HACE, ERES UN/A MÁQUINA!");
         mensaje.innerHTML = "¡ENHORABUENA! Pulse Inciar si quiere seguir jugando"
@@ -114,7 +114,7 @@ function lanzar()
         
     }else if (!(rangox) && rangoy) {
 
-        console.log('adios');
+        //console.log('adios');
         crono.stop();
         alert("¡QUE LÁSTIMA, A LA PRÓXIMA HABRÁ MÁS SUERTE!");
         mensaje.innerHTML = "Pulse Inciar si quiere seguir jugando"
