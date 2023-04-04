@@ -97,8 +97,8 @@ function lanzar()
     finrangox = xo + 60;
     rangox = (xp >= iniciorangox && xp <= finrangox);
     //console.log(rangox);
-    iniciorangoy = yo-20;
-    finrangoy = yo+20;
+    iniciorangoy = yo - 30;
+    finrangoy = yo + 30;
     rangoy = (yp >= iniciorangoy && yp <= finrangoy);
     //rango = (rangox && rangoy);
     //console.log(rango);
