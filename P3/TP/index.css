@@ -2,8 +2,10 @@
 Estilos para el campo de tiro
 */  
 
+
+
 #ctiro {
-    background-color: rgb(255, 184, 184);
+    background-image: url(fondo.jpg);
     border-style: solid;
     border-width: 1px;
     border-color: black;
