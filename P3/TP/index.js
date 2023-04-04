@@ -57,7 +57,7 @@ dibujarP(xop, yop, ldx, ldy, pcolor); // Pintar el proyectil
 
 
 //-- Ángulo del proyectil
-angulo.onchange = () => {
+angulo.oninput = () => {
     display1.innerHTML = angulo.value;
     angle = angulo.value;
     //console.log(angle);
@@ -65,7 +65,7 @@ angulo.onchange = () => {
 
 
 //-- Velocidad del proyectil
-velocidad.onchange = () => {
+velocidad.oninput = () => {
     display2.innerHTML = velocidad.value;
     velp = 0.1*velocidad.value;  //Ponemos el 0.1 multiplicando porque si no desaparece al momento del canvas, porque es demasiada velocidad.
     //console.log(velp);
