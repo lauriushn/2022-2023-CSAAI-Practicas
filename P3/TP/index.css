@@ -1,9 +1,6 @@
 /* 
 Estilos para el campo de tiro
 */  
-#columna {
-  width: 100%;
-}
 
 #ctiro {
     background-color: rgb(255, 184, 184);
@@ -15,11 +12,9 @@ Estilos para el campo de tiro
 
   /* esto lo utilizamos para que se adapte a la pantalla de movil:*/
 @media screen and (max-width: 600px) {
-
-  .columna {
+  #ctiro {
     width: 100%;
-
+    height: 100%;
   }
-
   
 }
