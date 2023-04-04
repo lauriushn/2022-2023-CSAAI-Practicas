@@ -9,7 +9,7 @@ let xp = xop;
 let yp = yop;
 let ldx = 50;  //proyectil dimension lado x
 let ldy = 50;  //proyectil dimension lado y
-let pcolor = 'green'  //proyectil color
+let pcolor = 'blue'  //proyectil color
 
 //-- Coordenadas iniciales del objetivo
 let xomin = 200;
@@ -58,7 +58,7 @@ dibujarP(xop, yop, ldx, ldy, pcolor); // Pintar el proyectil
 
 
 //-- Ángulo del proyectil
-angulo.onchange = () => {
+angulo.oninput = () => {
     display1.innerHTML = angulo.value;
     angle = angulo.value;
     //console.log(angle);
@@ -66,7 +66,7 @@ angulo.onchange = () => {
 
 
 //-- Velocidad del proyectil
-velocidad.onchange = () => {
+velocidad.oninput = () => {
     display2.innerHTML = velocidad.value;
     velp = 0.1*velocidad.value;  //Ponemos el 0.1 multiplicando porque si no desaparece al momento del canvas, porque es demasiada velocidad.
     //console.log(velp);
@@ -93,8 +93,8 @@ function lanzar()
     t += 0.1;
 
     //Commparar posiciones:
-    iniciorangox = xo - 50;
-    finrangox = xo + 50;
+    iniciorangox = xo - 60;
+    finrangox = xo + 60;
     rangox = (xp >= iniciorangox && xp <= finrangox);
     //console.log(rangox);
     iniciorangoy = yo-20;
@@ -132,7 +132,7 @@ function lanzar()
     //-- Volvemos a llamar a las caracterísitcas del proyectil, es util si por ejemplo al lanzarlo queremos que cambie.
     ldx = 51;
     ldy = 51;
-    pcolor = 'blue';
+    pcolor = 'black';
     dibujarP(xp, yp, ldx, ldy, pcolor); // Pintar el proyectil
     setInterval(dibujarP)
 
