@@ -1,4 +1,5 @@
 
+
 //-- Declaración de variables y objetos
 
 
@@ -9,7 +10,7 @@ let xp = xop;
 let yp = yop;
 let ldx = 50;  //proyectil dimension lado x
 let ldy = 50;  //proyectil dimension lado y
-let pcolor = 'blue'  //proyectil color
+let pcolor = 'green'  //proyectil color
 
 //-- Coordenadas iniciales del objetivo
 let xomin = 200;
@@ -58,7 +59,7 @@ dibujarP(xop, yop, ldx, ldy, pcolor); // Pintar el proyectil
 
 
 //-- Ángulo del proyectil
-angulo.oninput = () => {
+angulo.onchange = () => {
     display1.innerHTML = angulo.value;
     angle = angulo.value;
     //console.log(angle);
@@ -66,7 +67,7 @@ angulo.oninput = () => {
 
 
 //-- Velocidad del proyectil
-velocidad.oninput = () => {
+velocidad.onchange = () => {
     display2.innerHTML = velocidad.value;
     velp = 0.1*velocidad.value;  //Ponemos el 0.1 multiplicando porque si no desaparece al momento del canvas, porque es demasiada velocidad.
     //console.log(velp);
@@ -88,23 +89,23 @@ function lanzar()
     vely = velp*Math.sin((angle*Math.PI)/180); //velocidad en el eje y
 
     xp = xp + velx*t;
-    yp = yp - vely*t + (1/2)*g*t*t;
+    yp = yp - vely*t + 0.5*g*t*t;
      
     t += 0.1;
 
     //Commparar posiciones:
-    iniciorangox = xo - 60;
-    finrangox = xo + 60;
+    iniciorangox = xo - 50;
+    finrangox = xo + 50;
     rangox = (xp >= iniciorangox && xp <= finrangox);
     //console.log(rangox);
-    iniciorangoy = yo - 30;
-    finrangoy = yo + 30;
+    iniciorangoy = yo-20;
+    finrangoy = yo+20;
     rangoy = (yp >= iniciorangoy && yp <= finrangoy);
     //rango = (rangox && rangoy);
     //console.log(rango);
     
     if (rangox && rangoy) {
-        //console.log('hola');
+        console.log('hola');
         crono.stop();
         alert("¡ASÍ SE HACE, ERES UN/A MÁQUINA!");
         mensaje.innerHTML = "¡ENHORABUENA! Pulse Inciar si quiere seguir jugando"
@@ -114,7 +115,7 @@ function lanzar()
         
     }else if (!(rangox) && rangoy) {
 
-        //console.log('adios');
+        console.log('adios');
         crono.stop();
         alert("¡QUE LÁSTIMA, A LA PRÓXIMA HABRÁ MÁS SUERTE!");
         mensaje.innerHTML = "Pulse Inciar si quiere seguir jugando"
@@ -132,7 +133,7 @@ function lanzar()
     //-- Volvemos a llamar a las caracterísitcas del proyectil, es util si por ejemplo al lanzarlo queremos que cambie.
     ldx = 51;
     ldy = 51;
-    pcolor = 'black';
+    pcolor = 'blue';
     dibujarP(xp, yp, ldx, ldy, pcolor); // Pintar el proyectil
     setInterval(dibujarP)
 
@@ -212,5 +213,3 @@ btnIniciar.onclick = () => {
     crono.stop();
     crono.reset();
 }
-
-
