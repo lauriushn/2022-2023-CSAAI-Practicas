@@ -20,6 +20,9 @@ body {
   #ctiro {
     width: 100%;
     height: 100%;
+    background-image: url(fondo.jpg);
+    background-size: 100%;
+
   }
   
 }
