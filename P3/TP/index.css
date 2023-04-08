@@ -1,10 +1,15 @@
 /* 
 Estilos para el campo de tiro
 */  
+
 body {
   text-align: center;
   background-color: lightcyan;
 
+}
+
+h1 {
+  font-size: xx-large;
 }
 
 
