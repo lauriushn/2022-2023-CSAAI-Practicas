@@ -191,6 +191,26 @@ const flipCard = card => {
             flipBackCards()
         }, 1000)
     }
+
+    // Antes de terminar, comprobamos si quedan cartas por girar
+    // porque cuando no quedan cartas por girar hemos ganado
+    // y se lo tenemos que mostrar al jugador
+    if (!document.querySelectorAll('.card:not(.flipped)').length) {
+        setTimeout(() => {
+            // Le damos la vuelta al tablero
+            selectors.gridContainer.classList.add('flipped')
+            // Le mostramos las estadísticas del juego
+            selectors.win.innerHTML = `
+                <span class="win-text">
+                    ¡Has ganado!<br />
+                    con <span class="highlight">${state.totalFlips}</span> movimientos<br />
+                    en un tiempo de <span class="highlight">${state.totalTime}</span> segundos
+                </span>
+            `
+            // Paramos el loop porque el juego ha terminado
+            clearInterval(state.loop)
+        }, 1000)
+    }
 }
 
 
@@ -203,6 +223,13 @@ const flipBackCards = () => {
     // Ponemos el contado de parejas de cartas a cero
     state.flippedCards = 0
 }
+
+
+
+
+
+
+
 
 
 
