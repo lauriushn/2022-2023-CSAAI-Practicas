@@ -68,9 +68,49 @@ const generateGame = () => {
     selectors.tablero.replaceWith(parser.querySelector('.tablero'))
 }
 
+const pickRandom = (array, items) => {
+    // La sintaxis de tres puntos nos sirve para hacer una copia del array
+    const clonedArray = [...array]
+    // Random picks va almacenar la selección al azar de emojis
+    const randomPicks = [] 
+
+    for (let index = 0; index < items; index++) {
+        const randomIndex = Math.floor(Math.random() * clonedArray.length)
+        // Utilizamos el índice generado al azar entre los elementos del array clonado
+        // para seleccionar un emoji y añadirlo al array de randompicks.
+        randomPicks.push(clonedArray[randomIndex])
+        // Eliminamos el emoji seleccionado del array clonado para evitar que 
+        // vuelva a salir elegido con splice.
+        // 0 - Inserta en la posición que le indicamos.
+        // 1 - Remplaza el elemento, y como no le damos un nuevo elemento se queda vacío.
+        clonedArray.splice(randomIndex, 1)
+    }
+
+    return randomPicks
+}
+
+
+const shuffle = array => {
+    const clonedArray = [...array]
+
+    // Intercambiamos las posiciones de los emojis al azar para desorganizar el array
+    // así nos aseguramos de que las parejas de emojis no están consecutivas.
+    // Para conseguirlo utilizamos un algoritmo clásico de intercambio y nos apoyamos
+    // en una variable auxiliar.
+    for (let index = clonedArray.length - 1; index > 0; index--) {
+        const randomIndex = Math.floor(Math.random() * (index + 1))
+        const original = clonedArray[index]
+
+        clonedArray[index] = clonedArray[randomIndex]
+        clonedArray[randomIndex] = original
+    }
+
+    return clonedArray
+}
 
 
 
+generateGame();
 
 
 
