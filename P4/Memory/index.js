@@ -19,6 +19,7 @@ const state = {
     loop: null  //va a ir actualizando el display
 }
 
+//-- Displays
 
 
 
@@ -225,7 +226,18 @@ const flipBackCards = () => {
 }
 
 
+//--Otras funciones
+btn2.onclick = () => {
+    console.log('2');
+}
 
+btn4.onclick = () => {
+    console.log('4');
+}
+
+btn4.onclick = () => {
+    console.log('4');
+}
 
 
 
