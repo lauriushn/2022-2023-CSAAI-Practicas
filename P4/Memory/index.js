@@ -20,7 +20,8 @@ const state = {
 }
 
 //-- Displays
-
+const dimension = document.getElementById('dimension'); //dimensiones del memory game
+const nivel = document.getElementById('nivel'); //nivel de dificultad del memory game
 
 
 //--- Planteamos el tablero de juego:
@@ -235,8 +236,8 @@ btn4.onclick = () => {
     console.log('4');
 }
 
-btn4.onclick = () => {
-    console.log('4');
+btn6.onclick = () => {
+    console.log('6');
 }
 
 
