@@ -19,8 +19,8 @@ const state = {
     loop: null  //va a ir actualizando el display
 }
 
-//-- Cronómetro
-//const crono = new Crono(display);
+
+
 
 //--- Planteamos el tablero de juego:
 const generateGame = () => {
@@ -33,7 +33,7 @@ const generateGame = () => {
     }
 
     //-- Creamos un array con los emojis que vamos a utilizar en nuestro juego
-    const emojis = ['🥔', '🍒', '🥑', '🌽', '🥕', '🍇', '🍉', '🍌', '🥭', '🍍']
+    const emojis = ['🥔', '🍒', '🥑', '🌽', '🥕', '🍇', '🍉', '🍌', '🥭', '🍍', '🍎', '🍐']
     //const villains: hacer array con fotos de villanos
     
     //-- Elegimos un subconjunto de emojis al azar, así cada vez que comienza el juego

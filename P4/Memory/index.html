@@ -9,11 +9,20 @@
         <!-- Hoja de estilo -->
         <link rel="stylesheet" href="index.css">
 
+        <!-- Código JS -->
         <script src="index.js" defer></script>
     </head>
     <body>
+        <h1>🎮 MEMORY GAME 🎮</h1>
         <div class="game">
             <div class="controles">
+                <p>Elija la dimensión del Memory Game</p>
+                <button id="btn2" value="2">2x2</button>
+                <button id="btn4" value="4">4x4</button>
+                <button id="btn6" value="6">6x6</button> <br>
+                <p>Elija la dificultad</p>
+                <button id="facil">Fácil</button>
+                <button id="dificil">Difícil</button> <br> <br>
                 <button>Comenzar</button>
                 <div class="display">
                     <div class="movimientos">0 movimientos</div>
@@ -29,10 +38,6 @@
                     <div class="card">
                         <div class="card-front"></div>
                         <div class="card-back">🍍</div>
-                    </div>
-                    <div class="card">
-                        <div class="card-front"></div>
-                        <div class="card-back">🍊 </div>
                     </div>
                 </div>
                 <div class="win">¡Has Ganado!</div>
