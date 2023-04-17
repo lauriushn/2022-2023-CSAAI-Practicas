@@ -29,6 +29,7 @@ const resetGame = () => {
     state.totalTime = 0;
     clearInterval(state.loop);
     selectors.timer.textContent = "0 sec";
+    selectors.movimientos.textContent = "0 movimientos"
 
     generateGame();
     attachEventListeners()
@@ -36,7 +37,7 @@ const resetGame = () => {
 
 selectors.reinicio.onclick = () =>{
     console.log('reinicio');
-    resetGame;
+    resetGame();
 
 } 
 
