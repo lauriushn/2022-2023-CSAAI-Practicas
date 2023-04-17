@@ -7,7 +7,8 @@ const selectors = {
     tablero: document.querySelector('.tablero'),
     movimientos: document.querySelector('.movimientos'),
     timer: document.querySelector('.timer'),
-    comenzar: document.querySelector('button'),
+    comenzar: document.querySelector('.comenzar'),
+    reinicio: document.querySelector('.reinicio'),
     win: document.querySelector('.win'),
     dimensiones: document.querySelector('#dimensiones'),
 
@@ -21,6 +22,24 @@ const state = {
     loop: null  //va a ir actualizando el display
 }
 
+const resetGame = () => {
+    state.gameStarted = false;
+    state.flippedCards = 0;
+    state.totalFlips = 0;
+    state.totalTime = 0;
+    clearInterval(state.loop);
+    selectors.timer.textContent = "0 sec";
+
+    generateGame();
+    attachEventListeners()
+};
+
+selectors.reinicio.onclick = () =>{
+    console.log('reinicio');
+    resetGame;
+
+} 
+
 
 //--- Planteamos el tablero de juego:
 const generateGame = () => {
@@ -29,12 +48,12 @@ const generateGame = () => {
 
     //-- Nos aseguramos de que el número de dimensiones es par
     // y si es impar lanzamos un error
-    if (dimensions % 2 !== 0 || dimensions < 2) {
+    if (dimensions % 2 !== 0 || dimensions < 2 || dimensions > 6) {
         throw new Error("El número de dimensiones debe ser un número par mayor o igual a 2.");
     }
 
     //-- Creamos un array con los emojis que vamos a utilizar en nuestro juego
-    const emojis = ['🥔', '🍒', '🥑', '🌽', '🥕', '🍇', '🍉', '🍌', '🥭', '🍍', '🍎', '🍐']
+    const emojis = ['🥔', '🍒', '🥑', '🌽', '🥕', '🍇', '🍉', '🍌', '🥭', '🍍', '🍎', '🍐', '🍊', '🍓', '🫐', '🥥', '🫒', '🍈']
     //const villains: hacer array con fotos de villanos
     
     //-- Elegimos un subconjunto de emojis al azar, así cada vez que comienza el juego
@@ -58,6 +77,7 @@ const generateGame = () => {
                 </div>
             `).join('')}
        </div>
+    
     `
     
     //-- Vamos a utilizar un parser para transformar la cadena que hemos generado
@@ -77,6 +97,7 @@ const pickRandom = (array, items) => {
 
     for (let index = 0; index < items; index++) {
         const randomIndex = Math.floor(Math.random() * clonedArray.length)
+
         // Utilizamos el índice generado al azar entre los elementos del array clonado
         // para seleccionar un emoji y añadirlo al array de randompicks.
         randomPicks.push(clonedArray[randomIndex])
@@ -122,7 +143,7 @@ const attachEventListeners = () => {
             flipCard(eventParent)
         // Pero si lo que ha pasado es un clic en el botón de comenzar lo que hacemos es
         // empezar el juego
-        } else if (eventTarget.nodeName === 'BUTTON' && !eventTarget.className.includes('disabled')) {
+        } else if (eventTarget.className == 'comenzar' && !eventTarget.className.includes('disabled')) {
             startGame()
         }
     })

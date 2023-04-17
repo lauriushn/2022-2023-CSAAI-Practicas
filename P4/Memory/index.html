@@ -11,15 +11,20 @@
 
         <!-- Código JS -->
         <script src="index.js" defer></script>
-        <script src="crono.js"></script>
     </head>
     <body>
         <h1>🎮 MEMORY GAME 🎮</h1>
         <div class="game">
             <div class="controles">
-                <label for="dimensiones">Ingrese el número de dimensiones (debe ser par):</label>
-                <input type="number" id="dimensiones" min="2" max="10" value="4">
-                <button>Comenzar</button>
+                <label for="dimensiones">Seleccione el tamaño del tablero:</label>
+                <select id="dimensiones" name="dimensiones">
+                    <option value="2">2x2</option>
+                    <option value="4">4x4</option>
+                    <option value="6">6x6</option>
+                </select> <br>
+
+                <button class="comenzar">Comenzar</button>
+                <button  class="reinicio">Reiniciar</button>
                 <div class="display">
                     <div class="movimientos">0 movimientos</div>
                     <div class="timer">tiempo: 0 sec</div>

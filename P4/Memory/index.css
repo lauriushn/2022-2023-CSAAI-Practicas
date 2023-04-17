@@ -7,9 +7,8 @@
 font-family: Montserrat;
 */
 h1 {
-    text-align: center;
-    font-size: 60px;
-    margin-top: 20px;
+    font-size: 40px;
+    margin-top: 2opx;
 }
 
 body {
@@ -22,9 +21,10 @@ p {
 
 .game {
     position: absolute;
-    top: 50%;
+    top: 47%;
     left: 50%;
     transform: translate(-50%, -50%);
+    text-align: center;
 }
 
 button {
@@ -88,6 +88,7 @@ html {
     top: 47%;
     left: 50%;
     transform: translate(-50%, -50%);
+    text-align: center;
 }
 
 .controls {
