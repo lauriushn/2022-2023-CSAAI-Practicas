@@ -8,7 +8,9 @@ const selectors = {
     movimientos: document.querySelector('.movimientos'),
     timer: document.querySelector('.timer'),
     comenzar: document.querySelector('button'),
-    win: document.querySelector('.win')
+    win: document.querySelector('.win'),
+    dimensiones: document.querySelector('#dimensiones'),
+
 }
 
 const state = {
@@ -19,19 +21,16 @@ const state = {
     loop: null  //va a ir actualizando el display
 }
 
-//-- Displays
-const dimension = document.getElementById('dimension'); //dimensiones del memory game
-const nivel = document.getElementById('nivel'); //nivel de dificultad del memory game
-
 
 //--- Planteamos el tablero de juego:
 const generateGame = () => {
-    const dimensions = selectors.tablero.getAttribute('grid-dimension') 
+    const dimensions = selectors.dimensiones.value;
+
 
     //-- Nos aseguramos de que el número de dimensiones es par
     // y si es impar lanzamos un error
-    if (dimensions % 2 !== 0) {
-        throw new Error("Las dimensiones del tablero deben ser un número par.")
+    if (dimensions % 2 !== 0 || dimensions < 2) {
+        throw new Error("El número de dimensiones debe ser un número par mayor o igual a 2.");
     }
 
     //-- Creamos un array con los emojis que vamos a utilizar en nuestro juego
@@ -227,18 +226,7 @@ const flipBackCards = () => {
 }
 
 
-//--Otras funciones
-btn2.onclick = () => {
-    console.log('2');
-}
 
-btn4.onclick = () => {
-    console.log('4');
-}
-
-btn6.onclick = () => {
-    console.log('6');
-}
 
 
 
