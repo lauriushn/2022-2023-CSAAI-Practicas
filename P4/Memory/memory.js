@@ -29,11 +29,13 @@ const resetGame = () => {
     state.totalTime = 0;
     clearInterval(state.loop);
     selectors.timer.textContent = "0 sec";
-    selectors.movimientos.textContent = "0 movimientos"
+    selectors.movimientos.textContent = "0 movimientos";
+    selectors.comenzar.classList.remove('disabled'); //Línea para volver a habilitar el botón comenzar
 
     generateGame();
-    attachEventListeners()
-};
+    attachEventListeners();
+}
+
 
 selectors.reinicio.onclick = () =>{
     console.log('reinicio');
