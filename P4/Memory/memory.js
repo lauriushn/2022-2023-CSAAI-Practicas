@@ -29,7 +29,8 @@
         state.totalTime = 0;
         clearInterval(state.loop);
         selectors.timer.textContent = "0 sec";
-        selectors.gridContainer.classList.remove('flipped')
+        selectors.movimientos.textContent = "0 movimientos";
+        selectors.gridContainer.classList.remove('flipped');
         selectors.comenzar.classList.remove('disabled'); //Línea para volver a habilitar el botón comenzar
 
 
