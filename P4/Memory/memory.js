@@ -144,6 +144,7 @@ const attachEventListeners = () => {
         // Como el elemento que ha disparado el evento y el contenedor que lo contiene
         const eventTarget = event.target
         const eventParent = eventTarget.parentElement
+        
 
         // Cuando se trata de una carta que no está girada, le damos la vuelta para mostrarla
         if (eventTarget.className.includes('card') && !eventParent.className.includes('flipped')) {

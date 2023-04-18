@@ -9,6 +9,7 @@ font-family: Montserrat;
 h1 {
     font-size: 40px;
     margin-top: 2opx;
+    text-shadow: 4px 4px 6px #555;
 }
 
 body {
@@ -29,6 +30,25 @@ p {
 
 button {
     cursor: pointer;
+}
+
+select {
+    font-size: 14px; /* Establece el tamaño de fuente */
+    padding: 6px; /* Agrega un espacio de relleno en los bordes del elemento */
+    border-radius: 5px; /* Establece la curvatura de los bordes */
+    border: 1px solid rgb(96, 96, 96); /* Establece el grosor y el color del borde */
+    background-color: rgb(203, 230, 206); /* Establece el color de fondo del elemento */
+    box-shadow: 0 0 5px rgba(0,0,0,0.1); /* Agrega una sombra alrededor del elemento */
+  }
+
+/* Cambia el color de fondo cuando se selecciona una opción */
+select:focus {
+    background-color: #fff;
+}
+  
+/* Cambia el color de fondo de las opciones */
+select option {
+    background-color: rgb(255, 227, 150);
 }
 
 .disabled {
