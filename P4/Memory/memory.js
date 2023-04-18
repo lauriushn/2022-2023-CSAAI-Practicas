@@ -31,6 +31,7 @@ const resetGame = () => {
     selectors.timer.textContent = "0 sec";
     selectors.movimientos.textContent = "0 movimientos";
     selectors.comenzar.classList.remove('disabled'); //Línea para volver a habilitar el botón comenzar
+    selectors.gridContainer.classList.remove('flipped');
 
     generateGame();
     attachEventListeners();
@@ -46,7 +47,7 @@ selectors.reinicio.onclick = () =>{
 
 //--- Planteamos el tablero de juego:
 const generateGame = () => {
-    const dimensions = selectors.dimensiones.value;
+    let dimensions = selectors.dimensiones.value;
 
 
     //-- Nos aseguramos de que el número de dimensiones es par
@@ -57,13 +58,13 @@ const generateGame = () => {
 
     //-- Creamos un array con los emojis que vamos a utilizar en nuestro juego
     const emojis = ['🥔', '🍒', '🥑', '🌽', '🥕', '🍇', '🍉', '🍌', '🥭', '🍍', '🍎', '🍐', '🍊', '🍓', '🫐', '🥥', '🫒', '🍈']
-    //const villains: hacer array con fotos de villanos
     
     //-- Elegimos un subconjunto de emojis al azar, así cada vez que comienza el juego
     // es diferente.
     // Es decir, si tenemos un array con 10 emojis, vamos a elegir el cuadrado de las
     // dimensiones entre dos, para asegurarnos de que cubrimos todas las cartas
     const picks = pickRandom(emojis, (dimensions * dimensions) / 2) 
+    console.log(picks);
 
     //-- Después descolocamos las posiciones para asegurarnos de que las parejas de cartas
     // están desordenadas.
@@ -85,11 +86,12 @@ const generateGame = () => {
     
     //-- Vamos a utilizar un parser para transformar la cadena que hemos generado
     // en código html.
-    const parser = new DOMParser().parseFromString(cards, 'text/html')
+    //const parser = new DOMParser().parseFromString(cards, 'text/html')
 
     //-- Por último, vamos a inyectar el código html que hemos generado dentro de el contenedor
     // para el tablero de juego.
-    selectors.tablero.replaceWith(parser.querySelector('.tablero'))
+    //selectors.tablero.replaceWith(parser.querySelector('.tablero'))
+    selectors.tablero.innerHTML = cards;
 }
 
 const pickRandom = (array, items) => {
