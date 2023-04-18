@@ -194,7 +194,6 @@ const startGame = () => {
 }
 
 
-
 const flipCard = card => {
     // Sumamos uno al contador de cartas giradas
     state.flippedCards++
