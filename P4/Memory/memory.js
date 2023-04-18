@@ -1,61 +1,73 @@
-
 //-- Declaración de variables y objetos
-    //captura y gestión de estados
-
-    const selectors = {
-        gridContainer: document.querySelector('.grid-container'),
-        tablero: document.querySelector('.tablero'),
-        movimientos: document.querySelector('.movimientos'),
-        timer: document.querySelector('.timer'),
-        comenzar: document.querySelector('.comenzar'),
-        reinicio: document.querySelector('.reinicio'),
-        win: document.querySelector('.win'),
-        dimensiones: document.querySelector('#dimensiones'),
-    
-    }
-    
-    const state = {
-        gameStarted: false,
-        flippedCards: 0,
-        totalFlips: 0,  //numero de giros de las cartas, de movimientos
-        totalTime: 0, //total del tiempo
-        loop: null  //va a ir actualizando el display
-    }
-    
-    const resetGame = () => {
-        state.gameStarted = false;
-        state.flippedCards = 0;
-        state.totalFlips = 0;
-        state.totalTime = 0;
-        clearInterval(state.loop);
-        selectors.timer.textContent = "0 sec";
-        selectors.movimientos.textContent = "0 movimientos";
-        selectors.gridContainer.classList.remove('flipped');
-        selectors.comenzar.classList.remove('disabled'); //Línea para volver a habilitar el botón comenzar
-
-
+const selectors = {
+    gridContainer: document.querySelector(".grid-container"),
+    tablero: document.querySelector(".tablero"),
+    movimientos: document.querySelector(".movimientos"),
+    timer: document.querySelector(".timer"),
+    comenzar: document.querySelector(".comenzar"),
+    reinicio: document.querySelector(".reinicio"),
+    win: document.querySelector(".win"),
+    //dimensiones: document.querySelector('#dimensiones'),
+  };
+  
+  const state = {
+    gameStarted: false,
+    flippedCards: 0,
+    totalFlips: 0, //numero de giros de las cartas, de movimientos
+    totalTime: 0, //total del tiempo
+    loop: null, //va a ir actualizando el display
+    lastFlippedCard: null,
+  };
+  
+  const resetGame = () => {
+    state.gameStarted = false;
+    state.flippedCards = 0;
+    state.totalFlips = 0;
+    state.totalTime = 0;
+    clearInterval(state.loop);
+    selectors.timer.textContent = "0 sec";
+    selectors.movimientos.textContent = "0 movimientos";
+    selectors.gridContainer.classList.remove("flipped");
+    selectors.comenzar.classList.remove("disabled"); //Línea para volver a habilitar el botón comenzar
+  
     generateGame();
     attachEventListeners();
-}
-
-
-selectors.reinicio.onclick = () =>{
-    console.log('reinicio');
+  };
+  
+  //-- Dimensiones
+  const dimensiones = document.getElementById("dimensiones");
+  const output = document.getElementById("dimensiones-value");
+  
+  dimensiones.addEventListener("input", () => {
+    output.textContent = dimensiones.value;
     resetGame();
-}
-
-
-//--- Planteamos el tablero de juego:
-const generateGame = () => {
-    let dimensions = selectors.dimensiones.value;
-
-
+    generateGame();
+    attachEventListeners();
+  });
+  
+  selectors.reinicio.onclick = () => {
+    console.log("reinicio");
+    resetGame();
+    generateGame();
+    attachEventListeners();
+  };
+  
+  //--- Planteamos el tablero de juego:
+  const generateGame = () => {
+    let dimensions = dimensiones.value;
+  
     //-- Nos aseguramos de que el número de dimensiones es par
-    // y si es impar lanzamos un error
+    // y si es impar mostramos un mensaje de error y deshabilitamos el botón "Comenzar".
     if (dimensions % 2 !== 0 || dimensions < 2 || dimensions > 6) {
-        throw new Error("El número de dimensiones debe ser un número par mayor o igual a 2.");
+      selectors.comenzar.classList.add("disabled");
+      selectors.tablero.innerHTML = '<div class="error">El número de dimensiones debe ser un número par mayor o igual a 2.</div>';
+      return;
+    } else {
+      selectors.comenzar.classList.remove("disabled");
+      selectors.tablero.innerHTML = "";
     }
-
+  
+  
     //-- Creamos un array con los emojis que vamos a utilizar en nuestro juego
     const emojis = ['🥔', '🍒', '🥑', '🌽', '🥕', '🍇', '🍉', '🍌', '🥭', '🍍', '🍎', '🍐', '🍊', '🍓', '🫐', '🥥', '🫒', '🍈']
     //const villains: hacer array con fotos de villanos
