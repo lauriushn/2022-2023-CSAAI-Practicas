@@ -222,6 +222,7 @@ button {
     .game {
       max-width: 100%;
       padding: 0 1em;
+      margin-top: 60px;
     }
   
     h1 {
@@ -239,6 +240,8 @@ button {
       width: 90%;
       margin: 0 auto;
     }
+
+
   }
 
 
