@@ -1,6 +1,6 @@
 @font-face {
-    font-family: Montserrat;
-    src: url(./Montserrat-Regular.ttf);
+    font-family: Nova Oval;
+    src: url(NovaOval-Regular.ttf);
 }
 
 /* Y así podremos hacer referencia al font-family Montserrat más adelante
@@ -153,6 +153,7 @@ button {
     position: relative;
     align-items: center;
     text-align: center;
+    align-items: center;
 }
 
 .tablero,
