@@ -16,10 +16,13 @@
         <h1>🎮 MEMORY GAME 🎮</h1>
         <div class="game">
             <div class="controles">
-                <p>Seleccione las dimensiones del tablero:</p>
-                <input type="range" min="2" max="6" step="2" value="2" id="dimensiones">
-                <output for="dimensiones" id="dimensiones-value"></output>
-                <br>
+                <label for="dimensiones">Seleccione el tamaño del tablero:</label>
+                <select id="dimensiones" name="dimensiones">
+                    <option value="2">2x2</option>
+                    <option value="4">4x4</option>
+                    <option value="6">6x6</option>
+                </select> <br> <br>
+
                 <button class="comenzar">Comenzar</button>
                 <button  class="reinicio">Reiniciar</button>
                 <div class="display">

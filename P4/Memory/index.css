@@ -7,9 +7,10 @@
 font-family: Montserrat;
 */
 h1 {
-    font-size: 40px;
-    margin-top: 2opx;
-    text-shadow: 4px 4px 6px #555;
+    font-size: 50px;
+    margin-top: 40px;
+    margin-left: 20px;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
 }
 
 body {
@@ -26,12 +27,12 @@ p {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
+    align-items: center;
 }
 
 button {
     cursor: pointer;
 }
-
 
 .disabled {
     color: #757575;
@@ -42,6 +43,8 @@ button {
     width: 80px;
     height: 80px;
     cursor: pointer;
+    text-align: center;
+    align-items: center;
 }
 
 .card-front,
@@ -59,7 +62,7 @@ button {
 .card-back {
     font-size: 28pt;
     text-align: center;
-    line-height: 100px;
+    line-height: 70px; /*Así ajustamos el emoji en el centro*/
     background: #FDF8E6;
     transform: rotateY(180deg) rotateZ(50deg);
     user-select: none;
@@ -87,10 +90,12 @@ html {
 
 .game {
     position: absolute;
-    top: 50%;
+    top: 40%;
     left: 50%;
+    bottom: 20%;
     transform: translate(-50%, -50%);
     text-align: center;
+    align-items: center;
 }
 
 .controls {
@@ -103,11 +108,11 @@ button {
     background: #282A3A;
     color: #FFF;
     border-radius: 5px;
-    padding: 7px 12px;
+    padding: 6px 12px;
     border: 0;
     cursor: pointer;
     font-family: Fredoka;
-    font-size: 12pt;
+    font-size: 14pt;
 }
 
 .disabled {
@@ -121,6 +126,7 @@ button {
 
 .grid-container {
     position: relative;
+    align-items: center;
     text-align: center;
 }
 
@@ -134,10 +140,11 @@ button {
 }
 
 .tablero {
-    padding: 15px;
+    padding: 20px;
     display: grid;
     grid-template-columns: repeat(4, auto);
     grid-gap: 20px;
+    align-items: center;
     text-align: center;
 }
 
@@ -154,14 +161,16 @@ button {
     width: 80px;
     height: 80px;
     cursor: pointer;
+    align-items: center;
+    text-align: center;
 }
 
 .card-front,
 .card-back {
     position: absolute;
     border-radius: 5px;
-    width: 90%;
-    height: 90%;
+    width: 100%;
+    height: 100%;
     background: #282A3A;
     transition: transform .6s cubic-bezier(0.4, 0.0, 0.2, 1);
     backface-visibility: hidden;
@@ -170,7 +179,7 @@ button {
 .card-back {
     font-size: 28pt;
     text-align: center;
-    line-height: 70px; /*Ajustamos la posición del emoji en la carta*/
+    line-height: 100px;
     background: #FDF8E6;
     transform: rotateY(180deg) rotateZ(50deg);
     user-select: none;
@@ -207,3 +216,35 @@ button {
 .highlight {
     color: #6f00fc;
 }
+
+@media screen and (max-width: 600px){
+    /* Estilos para pantallas pequeñas */
+    .game {
+      max-width: 100%;
+      padding: 0 1em;
+    }
+  
+    h1 {
+      font-size: 3em;
+      margin-top: 1em;
+      margin-bottom: 0.5em;
+    }
+  
+    .card {
+      width: 30%;
+      height: auto;
+    }
+  
+    .tablero {
+      width: 90%;
+      margin: 0 auto;
+    }
+  }
+
+
+
+
+
+
+
+
