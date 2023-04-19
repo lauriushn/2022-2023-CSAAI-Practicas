@@ -40,7 +40,7 @@ const resetGame = () => {
 }
 
 selectors.reinicio.onclick = () =>{
-    console.log('reinicio');
+    //console.log('reinicio');
     resetGame();
 } 
 
@@ -58,14 +58,13 @@ const generateGame = () => {
 
     //-- Creamos un array con los emojis que vamos a utilizar en nuestro juego
     const emojis = ['🥔', '🍒', '🥑', '🌽', '🥕', '🍇', '🍉', '🍌', '🥭', '🍍', '🍎', '🍐', '🍊', '🍓', '🫐', '🥥', '🫒', '🍈']
-    //const villains: hacer array con fotos de villanos
     
     //-- Elegimos un subconjunto de emojis al azar, así cada vez que comienza el juego
     // es diferente.
     // Es decir, si tenemos un array con 10 emojis, vamos a elegir el cuadrado de las
     // dimensiones entre dos, para asegurarnos de que cubrimos todas las cartas
     const picks = pickRandom(emojis, (dimensions * dimensions) / 2)
-    console.log(picks);
+    //console.log(picks);
 
     //-- Después descolocamos las posiciones para asegurarnos de que las parejas de cartas
     // están desordenadas.
