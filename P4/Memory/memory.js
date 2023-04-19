@@ -44,6 +44,10 @@ selectors.reinicio.onclick = () =>{
     resetGame();
 } 
 
+selectors.dimensiones.addEventListener('change', () => {
+    generateGame();
+});
+
 
 //--- Planteamos el tablero de juego:
 const generateGame = () => {
