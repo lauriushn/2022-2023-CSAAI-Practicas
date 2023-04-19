@@ -1,5 +1,5 @@
 @font-face {
-    font-family: Nova Oval;
+    font-family: 'Nova Oval';
     src: url(NovaOval-Regular.ttf);
 }
 
@@ -7,10 +7,12 @@
 font-family: Montserrat;
 */
 h1 {
+    color: #282A3A;
     font-size: 55px;
     margin-top: 40px;
     margin-left: 20px;
-    text-shadow: 3px 3px 5px rgba(0, 0, 0, 1);
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.75);
+    font-family: 'Nova Oval';
 }
 
 body {
