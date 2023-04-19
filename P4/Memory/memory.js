@@ -44,11 +44,6 @@ selectors.reinicio.onclick = () =>{
     resetGame();
 } 
 
-selectors.dimensiones.addEventListener('change', () => {
-    generateGame();
-});
-
-
 //--- Planteamos el tablero de juego:
 const generateGame = () => {
     let dimensions = selectors.dimensiones.value;
@@ -159,7 +154,7 @@ const attachEventListeners = () => {
         }else if (selectedDimensions != selectors.dimensiones.value && state.gameStarted == false){
             selectedDimensions = selectors.dimensiones.value;
             resetGame();
-            console.log('reinicio');
+            //console.log('reinicio');
         }
     })
 }
