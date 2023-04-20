@@ -24,6 +24,10 @@ img.onload = function () {
   console.log("Imagen lista...");
 };
 
+  //-- Situar la imagen original en el canvas
+  //-- No se han hecho manipulaciones todavía
+  ctx.drawImage(img, 0,0);
+  
   //-- Obtener la imagen del canvas en pixeles
   let imgData = ctx.getImageData(0, 0, canvas.width, canvas.height);
 
@@ -39,6 +43,7 @@ img.onload = function () {
       data[i] = brillo;
       data[i+1] = brillo;
       data[i+2] = brillo;
+      console.log('brillo');
     }
 
   //-- Poner la imagen modificada en el canvas
