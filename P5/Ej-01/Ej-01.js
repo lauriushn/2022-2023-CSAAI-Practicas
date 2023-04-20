@@ -48,6 +48,7 @@ img.onload = function () {
   data[i*4] = 255;    //-- Canal Rojo
   data[i*4 + 1] = 0;  //-- Canal Verde
   data[i*4 + 2] = 0;  //-- Canal azul
+  //APARECE UN PIXEL PEQUEÑITO QUE APENAS SE VE ENCIMA DE LA V DE UNIVERSIDAD DEL LOGO
 
   //-- Poner la imagen modificada en el canvas
   ctx.putImageData(imgData, 0, 0);
