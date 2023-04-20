@@ -30,7 +30,7 @@ img.onload = function () {
   //-- eliminado el canal rojo y dejando el resto igual que
   //-- estaba
   for (let i = 0; i < data.length; i+=4) {
-    data[i] = 0; //-- Canal rojo a 0
+    data[i] = 100; //-- Canal rojo a 0
   }
 
   //-- Poner la imagen modificada en el canvas
